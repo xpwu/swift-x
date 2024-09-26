@@ -18,15 +18,23 @@ public extension Duration {
 }
 
 public extension Duration {
+	static let INFINITE = UInt64.max
+}
+
+public extension Duration {
+	func microSecond() -> UInt64 {
+		return self/Duration.Microsecond
+	}
+	func milliSecond() -> UInt64 {
+		return self/Duration.Millisecond
+	}
   func second() -> UInt64 {
     return self/Duration.Second
   }
-  
-  func milliSecond() -> UInt64 {
-    return self/Duration.Millisecond
-  }
-  
   func minute() -> UInt64 {
     return self/Duration.Minute
   }
+	func hour() -> UInt64 {
+		return self/Duration.Hour
+	}
 }

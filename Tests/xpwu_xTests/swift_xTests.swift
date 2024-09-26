@@ -9,4 +9,9 @@ final class swift_xTests: XCTestCase {
         // Defining Test Cases and Test Methods
         // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
     }
+	
+	func testLogger() {
+		let logger = PrintLogger()
+		logger.Debug("ddd", "xxx")
+	}
 }
