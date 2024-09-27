@@ -31,7 +31,9 @@ public extension Logger {
 }
 
 
-public struct PrintLogger {}
+public struct PrintLogger {
+	public init(){}
+}
 
 extension PrintLogger: Logger {
 	public func OutPut(type: LoggerType, tag: ()->String, msg: ()->String, file: String, line: Int) {

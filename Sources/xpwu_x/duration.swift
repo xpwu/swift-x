@@ -37,4 +37,7 @@ public extension Duration {
 	func hour() -> UInt64 {
 		return self/Duration.Hour
 	}
+	func timeInterval() -> TimeInterval {
+		return TimeInterval(self.second())
+	}
 }
