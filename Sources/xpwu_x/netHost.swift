@@ -61,7 +61,7 @@ public extension Data {
 	func net2UInt64()->UInt64 {
 		var ret:UInt64 = 0;
 		for i in 0..<[self.count, 8].min()! {
-			ret = (ret << 8) + UInt64(self[i]&0xff)
+			ret = (ret << 8) + UInt64(self[i + startIndex]&0xff)
 		}
 		
 		return ret;
@@ -70,7 +70,7 @@ public extension Data {
 	func net2UInt32()->UInt32 {
 		var ret:UInt32 = 0;
 		for i in 0..<[self.count, 4].min()! {
-			ret = (ret << 8) + UInt32(self[i]&0xff)
+			ret = (ret << 8) + UInt32(self[i + startIndex]&0xff)
 		}
 		
 		return ret;
@@ -79,7 +79,7 @@ public extension Data {
 	func net2UInt16()->UInt16 {
 		var ret:UInt16 = 0;
 		for i in 0..<[self.count, 2].min()! {
-			ret = (ret << 8) + UInt16(self[i]&0xff)
+			ret = (ret << 8) + UInt16(self[i + startIndex]&0xff)
 		}
 		
 		return ret;
