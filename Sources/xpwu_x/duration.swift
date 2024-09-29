@@ -41,3 +41,9 @@ public extension Duration {
 		return TimeInterval(self.second())
 	}
 }
+
+extension Duration: CustomStringConvertible {
+	var description: String {
+		return "\(self.milliSecond())ms"
+	}
+}
