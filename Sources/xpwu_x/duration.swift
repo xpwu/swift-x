@@ -44,7 +44,7 @@ public extension Duration {
 
 // UInt64 已经实现了 CustomStringConvertible::description
 // 所以无法通过 CustomStringConvertible::description 实现 Duration 的输出
-extension Duration {
+public extension Duration {
 	var toString: String {
 		get {
 			var ret = ""
