@@ -44,7 +44,7 @@ public extension MatchResult {
 		return String(self.text[rang])
 	}
 	
-	public var count: Int { get{ self.result.numberOfRanges } }
+	var count: Int { get{ self.result.numberOfRanges } }
 }
 
 
