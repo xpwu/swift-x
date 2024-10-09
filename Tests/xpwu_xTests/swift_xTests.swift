@@ -21,6 +21,7 @@ final class swift_xTests: XCTestCase {
 			"13h9min5s380ms40us"),
 			(300*Duration.Second, "5min"),
 			(30*Duration.Second, "30s"),
+			(0, "0us"),
 		].map { testValue in
 			let (t, s) = testValue
 			XCTAssertEqual(t.toString, s)
@@ -34,6 +35,9 @@ final class swift_xTests: XCTestCase {
 			(300*Duration.Second, "5min"),
 			(30*Duration.Second, "30s"),
 			(nil, "30ss"),
+			(0, "0us"),
+			(0, "0s"),
+			(0, "0000h00min000s0ms00000us"),
 		].map { testValue in
 			let (t, s) = testValue
 			let d = Duration.from(string: s)
