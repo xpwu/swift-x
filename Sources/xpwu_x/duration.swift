@@ -75,6 +75,10 @@ public extension Duration {
 				ret += "\(v)us"
 			}
 			
+			if ret.isEmpty {
+				ret = "0us"
+			}
+			
 			return ret
 		}
 	}
@@ -85,7 +89,7 @@ public extension Duration {
 		}
 		
 		guard let regex = try? NSRegularExpression(
-			pattern: "^(([1-9][0-9]*)h)?(([1-9][0-9]*)min)?(([1-9][0-9]*)s)?(([1-9][0-9]*)ms)?(([1-9][0-9]*)us)?$"
+			pattern: "^(([0-9]+)h)?(([0-9]+)min)?(([0-9]+)s)?(([0-9]+)ms)?(([0-9]+)us)?$"
 			, options: .caseInsensitive) else {
 			return nil
 		}
