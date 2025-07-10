@@ -8,7 +8,7 @@ public enum LoggerType: String {
 	case Debug, Info, Warning, Error
 }
 
-public protocol Logger {
+public protocol Logger: Sendable {
 	func OutPut(type: LoggerType, tag: ()->String, msg: ()->String, file: String, line: Int)
 }
 
